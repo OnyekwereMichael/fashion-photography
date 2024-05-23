@@ -1,0 +1,219 @@
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: "Fredoka", sans-serif;
+  // min-height: 100vh;
+  background-image: url("./header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  @include flex(space-between);
+  margin: $margin-twentyfive;
+  overflow: hidden;
+  
+
+  .plannings {
+    @include flex(none);
+    gap: 30px
+  }
+
+  .links {
+    @include flex(none);
+  }
+
+  li {
+    list-style-type: none;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+    color: map-get($color, "White");
+    margin: $margin-twenty;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+  }
+}
+
+// .links a::after{
+//     position: absolute;
+//     content: "";
+//     bottom: 0;
+//     left: 0;
+//     height: 2px;
+//     width: 0;
+//     background-color: map-get($color, 'White' );
+//     transition: .3s ease-in-out;
+
+ 
+//   }
+
+//   .links a:hover::after{
+//     width: 100%;
+//   }
+
+
+.main_overview{
+    padding: 80px 25px 0 25px;
+    
+
+    .Jeremmy{
+        color: map-get($color, 'White' );
+        font-size: 1.5rem;
+    }
+
+    .fashion{
+        color: map-get($color, "White" );
+        font-size: 7rem;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px map-get($color, 'White' );
+    }
+
+    .photography{
+        color: map-get($color, "White" );
+        font-size: 7rem;
+    }
+}
+
+.button{
+    @include flex(space-between);
+    margin: 50px $margin-twentyfive;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: 17%;
+
+    button{
+      padding: 6.5px 20px;
+      background-color: transparent;
+      color: map-get($color, "White" );
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      margin: auto;
+    }
+    
+    .arrow{
+      width: 50px;
+    }
+  
+}
+
+.scroll__bottom {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, -5rem) rotate(-90deg);
+  animation: scroll-down 2s linear infinite;
+  margin: -100px $margin-twentyfive;
+}
+
+.scroll__bottom a {
+  text-decoration: none;
+  @include flex(none);
+  gap: 10px;
+  color: map-get($color, 'White');
+}
+
+.scroll__bottom span {
+  display: block;
+  font-size: 1.2rem;
+  transform: rotate(90deg);
+}
+
+@keyframes scroll-down {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 10px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+
+footer {
+  .socials{
+   @include flex(flex-end);
+   align-items: center;
+    margin: 40px 50px 0  $margin-fifty;
+    padding: $padding-twenty;
+    border-radius: 100%;
+
+    a{
+      text-decoration: none;
+       font-size: 30px;
+       margin: 20px ;
+       border-radius: 50%;
+       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.397);
+       color: #b32557;
+       background-color: #fff;
+       width: 50px;
+       height: 50px;
+       @include flex(center)
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .button{
+    width: 40%;
+    margin: 50px $margin-twentyfive;
+     
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body{
+     overflow: hidden;
+  }
+  .main_overview{
+    overflow: hidden;
+    margin: 100px 0;
+
+    .fashion, .photography{
+      font-size: 4rem;
+      margin: 20px 0 0 0;
+    }
+
+    .photography{
+      font-size: 3.5rem;
+    }
+  }
+
+  .button{
+    width: 60%;
+    margin: 10px $margin-twentyfive;
+     
+  }
+
+  footer{
+    .socials {
+      margin: 50px 0;
+      padding: 100px 0;
+    }
+  }
+
+  .scroll__bottom{
+    margin:  -10px $margin-twentyfive;
+  }
+}
+
+
+
+
+
+
+

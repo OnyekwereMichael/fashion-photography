@@ -1,0 +1,74 @@
+$color: (
+  "black": rgba(0, 0, 0, 0.904),
+  "Fadedblue": #5041bc,
+  "White": #fff,
+  "lightorange": #ff8057,
+  "darkblue": #263156,
+  "light-blue": #f5f3ff,
+  "lightgray": #54657e,
+  "gray": #797d8c,
+  "fadedgray": #ebe8ff,
+  "gold": #f7941d,
+  "lightgreen": #43be83,
+  "lightergray": #d3cbfb,
+  "fadedgreen": #6ad2a0,
+  "lightred": #ea8f95,
+);
+
+@mixin flex($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: $direction;
+}
+
+//sizes
+$tiny: 0.5rem;
+$thin: 0.6rem;
+$xsm: 0.7rem;
+$xm: 0.8rem;
+$sm: 0.9rem;
+$sm: 0.8rem;
+$base: 1rem;
+$base: 1rem;
+$md: 1.25rem;
+$lg: 1.5rem;
+$xl: 2rem;
+$xxl: 5rem;
+
+// borders
+$border: none;
+$border-radius: 5px;
+$border-radius-ten: 10px;
+$border-radius-fifteen: 15px;
+$border-radius-twenty: 20px;
+$border-radius-twentyfive: 25px;
+$border-radius-thirty: 30px;
+
+// padding
+$padding: 5px;
+$padding-ten: 10px;
+$padding-fifteen: 15px;
+$padding-twenty: 20px;
+$padding-twentyfive: 25px;
+$padding-thirty: 30px;
+$padding-fifty: 50px;
+
+// margins
+$margin: 5px;
+$margin-ten: 10px;
+$margin-fifteen: 15px;
+$margin-twenty: 20px;
+$margin-twentyfive: 25px;
+$margin-thirty: 30px;
+$margin-fifty: 50px;
+
+// font families
+@font-face {
+  font-family: "Proxima";
+  font-style: normal;
+  src: url("../Proxima Nova Font.otf");
+}
+
+$Inter: "Inter", sans-serif;
+$SourceSans: "Source Sans Pro", sans-serif;
+$Proxima: "Source Sans Pro", sans-serif, Arial;
